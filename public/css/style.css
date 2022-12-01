@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Lexend Deca", Roboto, sans-serif;
+    min-height: 100%;
+}
+
+body > .container {
+    padding: 80px 15px 0;
+}
+
+/* Texts */
+p {
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.lb-sm {
+    font-size: 15px;
+}
+
+.fixed-buttonpos .bi {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.navbar-toggler-image.navbar-toggler-icon {
+    width: 1.4em;
+    height: 1.2em;
+    background-image: none;
+}
+
+.navbar-toggler {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-toggler:focus {
+    outline: 0;
+}
+
+.navbar {
+    min-height: 3.5rem;
+}
+
+.navbar-icons {
+    position: absolute;
+    left: 99%;
+    height: 1.5rem;
+    top: 0.8rem;
+    transform: translatex(-100%);
+}
+
+/* Desktop */
+@media screen and (min-width: 767px) {
+    .navbar-item-div {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    .navbar-brand-icon {
+        height: 2.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .fixed-buttonpos {
+        bottom: 5rem;
+        right: 5rem;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .nav-item:hover .nav-link {
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        margin-top: 0;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .navbar-brand-icon {
+        position: absolute;
+        left: 50%;
+        height: 2.8rem;
+        top: 0.5rem;
+        transform: translatex(-50%);
+    }
+
+    .fixed-buttonpos {
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
