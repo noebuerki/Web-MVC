@@ -9,7 +9,7 @@
 
                 echo 'Username: ' . htmlentities($user->username);
                 if (Authentication::isAdmin()) {
-                    echo ' <span class="badge badge-warning">Admin</span>';
+                    echo ' <span class="badge bg-danger">Admin</span>';
                 }
                 ?>
             </p>
@@ -173,7 +173,6 @@
                     if (form.checkValidity() === false) {
                         event.preventDefault();
                         event.stopPropagation();
-                        Modal();
                     }
                     form.classList.add('was-validated');
                 }, false);

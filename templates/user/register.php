@@ -8,9 +8,7 @@
                     <input required type="text" data-toggle="tooltip" title="Enter Username"
                            placeholder="Username" class="form-control" id="usernameInput" name="usernameInput"
                            maxlength="20" onfocusout="checkUsername(this.value)">
-                    <p class="invalid-feedback" id="feedback">
-
-                    </p>
+                    <div class="invalid-feedback" id="usernameFeedback"></div>
                 </div>
 
                 <div class="form-group mb-2">
@@ -94,7 +92,6 @@
 </div>
 
 <script>
-    /* Form Validation | Von Bootstrap Dokumentation kopiert */
     (function () {
         'use strict';
         window.addEventListener('load', function () {
@@ -105,7 +102,6 @@
                     if (form.checkValidity() === false) {
                         event.preventDefault();
                         event.stopPropagation();
-                        Modal();
                     }
                     form.classList.add('was-validated');
                 }, false);
@@ -114,7 +110,7 @@
     })();
 
     function checkUsername(value) {
-        fetch('/user/checkUsername', {
+        fetch('/user/doCheckUsernameAvailable', {
             method: 'POST',
             body: JSON.stringify({Username: value}),
         }).then(function (response) {
@@ -122,13 +118,13 @@
         }).then(function (data) {
             let field = document.getElementById("usernameInput")
             if (!data) {
-                document.getElementById("feedback").innerText = "Username already taken";
+                document.getElementById("usernameFeedback").innerText = "Username already taken";
                 field.setCustomValidity("Taken");
             } else if (!field.value.match(/^[^\s]+$/)) {
-                document.getElementById("feedback").innerText = "Invalid Username";
+                document.getElementById("usernameFeedback").innerText = "Invalid Username";
                 field.setCustomValidity("Not matched");
             } else {
-                document.getElementById("feedback").innerText = "";
+                document.getElementById("usernameFeedback").innerText = "";
                 field.setCustomValidity("");
             }
         });

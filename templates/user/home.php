@@ -4,8 +4,11 @@
             <div class="card text-white bg-primary mb-3">
                 <div class="card-body justify-content-between">
                     <p class="card-title">Statistic 1</p>
-                    <?php
-                    ?>
+                    <p class="card-text">
+                        <?php
+                        echo 'Number 1';
+                        ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -14,8 +17,11 @@
             <div class="card text-white bg-info mb-3">
                 <div class="card-body justify-content-between">
                     <p class="card-title">Statistic 2</p>
-                    <?php
-                    ?>
+                    <p class="card-text">
+                        <?php
+                        echo 'Number 2';
+                        ?>
+                    </p>
                 </div>
             </div>
         </div>

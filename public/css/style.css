@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
-
 html {
     min-height: 100%;
 }
@@ -13,6 +12,7 @@ body {
 body > .container {
     padding: 80px 15px 0;
 }
+
 
 /* Texts */
 p {

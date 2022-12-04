@@ -8,7 +8,7 @@
                     <p class="card-title">Registered Users</p>
                     <p class="card-text">
                         <?php
-                        echo htmlentities($UserCount);
+                            echo htmlentities($UserCount);
                         ?>
                     </p>
                 </div>
@@ -20,6 +20,9 @@
                 <div class="card-body">
                     <p class="card-title">Statistic</p>
                     <p class="card-text">
+                        <?php
+                            echo 'Number';
+                        ?>
                     </p>
                 </div>
             </div>
@@ -29,8 +32,10 @@
             <a href="/admin/usermanager" role="button" class="btn btn-primary w-100 mb-4 align-items-center"
                data-toggle="tooltip" title="Open User-Management">
                 <div class="card-body">
-                    <p class="card-title">User-Management <i class="bi bi-people-fill"></i></p>
-                    <i class="bi bi-arrows-fullscreen mt-1"></i>
+                    <p class="card-title">
+                        User-Management 
+                        <i class="bi bi-people-fill"></i>
+                    </p>
                 </div>
             </a>
         </div>

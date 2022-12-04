@@ -86,9 +86,9 @@ class UserController
                     if (filter_var($_POST['emailInput'], FILTER_VALIDATE_EMAIL)) {
                         if (preg_match('/(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}/m', $_POST['passwordInput'])) {
                             if ($_POST['passwordInput'] === $_POST['passwordRepeatInput']) {
-                                $apiKey = bin2hex(random_bytes(32));
+                                $apiKey = substr(bin2hex(random_bytes(32)), 5, 25);
                                 while($this->UserRepo->readByApiKey($apiKey) != null) {
-                                    $apiKey = bin2hex(random_bytes(32));
+                                    $apiKey = substr(bin2hex(random_bytes(32)), 5, 25);
                                 }
 
                                 $this->UserRepo->create($_POST['usernameInput'], $_POST['emailInput'], $_POST['passwordInput'], $apiKey);

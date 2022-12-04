@@ -32,7 +32,6 @@
 </div>
 
 <script>
-    /* Form Validation */
     (function () {
         'use strict';
         window.addEventListener('load', function () {
