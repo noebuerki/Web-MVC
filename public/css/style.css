@@ -97,6 +97,10 @@ a:hover {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
+    .navbar-item-div {
+        margin-left: 12px;
+    }
+    
     .navbar-brand-icon {
         position: absolute;
         left: 50%;

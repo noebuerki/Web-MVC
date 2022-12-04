@@ -16,8 +16,8 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-        <button class="navbar-toggler navbar-toggler-button" type="button" data-toggle="collapse"
-                data-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+        <button class="navbar-toggler navbar-toggler-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
                 aria-label="Toggle navigation">
             <img src="/images/menu-icon.png" class="navbar-toggler-icon navbar-toggler-image" alt="Menu">
         </button>
